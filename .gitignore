@@ -1,9 +1,46 @@
-.venv/
+# Secrets et variables d’environnement
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Python
 __pycache__/
 *.py[cod]
-.pytest_cache/
-.ruff_cache/
+*.egg-info/
 dist/
 build/
-*.egg-info/
-.env
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Éditeurs
+.vscode/
+.idea/
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Données locales ou sensibles
+data/raw/*
+data/private/*
+data/confidential/*
+
+# Conserver les fichiers explicatifs
+!data/raw/README.md
+!data/private/README.md
+!data/confidential/README.md

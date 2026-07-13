@@ -1,0 +1,124 @@
+name: Bug Report
+description: Report a reproducible technical problem.
+title: "[Bug]: "
+body:
+
+* type: markdown
+  attributes:
+  value: |
+  Thank you for reporting a problem.
+
+  ```
+  Do not include credentials, API keys, confidential data, private datasets, or other sensitive information.
+  ```
+
+* type: textarea
+  id: summary
+  attributes:
+  label: Problem summary
+  description: Describe the problem clearly and concisely.
+  placeholder: What happened?
+  validations:
+  required: true
+
+* type: textarea
+  id: expected-behavior
+  attributes:
+  label: Expected behavior
+  description: Explain what you expected to happen.
+  validations:
+  required: true
+
+* type: textarea
+  id: reproduction
+  attributes:
+  label: Reproduction steps
+  description: Provide the smallest sequence of steps that reproduces the problem.
+  placeholder: |
+  1. Install...
+  2. Run...
+  3. Observe...
+  validations:
+  required: true
+
+* type: textarea
+  id: minimal-example
+  attributes:
+  label: Minimal reproducible example
+  description: Add a minimal code example or command when possible.
+  render: shell
+
+* type: textarea
+  id: error-output
+  attributes:
+  label: Error message or output
+  description: Paste the relevant error message, traceback, or log output.
+  render: shell
+
+* type: input
+  id: project-version
+  attributes:
+  label: Project version or commit
+  description: Provide the release version, branch, tag, or commit SHA.
+  placeholder: Example: v0.1.0 or commit abc1234
+  validations:
+  required: true
+
+* type: input
+  id: python-version
+  attributes:
+  label: Python version
+  placeholder: Example: Python 3.12.4
+  validations:
+  required: true
+
+* type: dropdown
+  id: operating-system
+  attributes:
+  label: Operating system
+  options:
+  - Linux
+  - macOS
+  - Windows
+  - Other
+  validations:
+  required: true
+
+* type: textarea
+  id: dependencies
+  attributes:
+  label: Relevant dependency versions
+  description: List the relevant package and library versions.
+  placeholder: |
+  numpy:
+  pandas:
+  scipy:
+  other:
+
+* type: textarea
+  id: impact
+  attributes:
+  label: Impact
+  description: Explain how the problem affects the research, results, tests, or workflow.
+  validations:
+  required: true
+
+* type: textarea
+  id: additional-context
+  attributes:
+  label: Additional context
+  description: Add any other non-sensitive information that may help diagnose the problem.
+
+* type: checkboxes
+  id: confirmation
+  attributes:
+  label: Submission checklist
+  options:
+  - label: I searched the existing issues and did not find the same problem.
+  required: true
+  - label: I provided sufficient steps to reproduce the problem.
+  required: true
+  - label: I removed credentials, confidential data, and sensitive information.
+  required: true
+  - label: I tested the problem using a supported Python version.
+  required: true

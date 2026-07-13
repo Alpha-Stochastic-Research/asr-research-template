@@ -1,131 +1,129 @@
 name: Research Proposal
 description: Propose a new research question, experiment, model, or study.
 title: "[Research]: "
+
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for submitting a research proposal.
 
-* type: markdown
-  attributes:
-  value: |
-  Thank you for submitting a research proposal.
+        Do not include confidential data, credentials, private documents, or restricted information.
 
-  ```
-  Do not include confidential data, credentials, private documents, or restricted information.
-  ```
+  - type: input
+    id: research-title
+    attributes:
+      label: Research title
+      description: Provide a concise title for the proposed research.
+      placeholder: "Example: Volatility forecasting using stochastic volatility models"
+    validations:
+      required: true
 
-* type: input
-  id: title
-  attributes:
-  label: Research title
-  description: Provide a concise title for the proposed research.
-  placeholder: Example: Volatility forecasting using stochastic volatility models
-  validations:
-  required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+      description: State the main research question clearly and precisely.
+      placeholder: What question will this project attempt to answer?
+    validations:
+      required: true
 
-* type: textarea
-  id: question
-  attributes:
-  label: Research question
-  description: State the main research question clearly and precisely.
-  placeholder: What question will this project attempt to answer?
-  validations:
-  required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Background and motivation
+      description: Explain why the question is important and which gap it addresses.
+    validations:
+      required: true
 
-* type: textarea
-  id: motivation
-  attributes:
-  label: Background and motivation
-  description: Explain why the question is important and which gap it addresses.
-  validations:
-  required: true
+  - type: textarea
+    id: hypotheses
+    attributes:
+      label: Hypotheses
+      description: List the hypotheses that should be evaluated.
+      placeholder: |
+        H1:
+        H2:
+        H3:
+    validations:
+      required: true
 
-* type: textarea
-  id: hypotheses
-  attributes:
-  label: Hypotheses
-  description: List the hypotheses that should be evaluated.
-  placeholder: |
-  H1:
-  H2:
-  H3:
-  validations:
-  required: true
+  - type: textarea
+    id: methodology
+    attributes:
+      label: Proposed methodology
+      description: Describe the planned mathematical, statistical, computational, or empirical methods.
+    validations:
+      required: true
 
-* type: textarea
-  id: methodology
-  attributes:
-  label: Proposed methodology
-  description: Describe the planned mathematical, statistical, computational, or empirical methods.
-  validations:
-  required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Data requirements
+      description: Describe the expected data sources, licenses, access conditions, and limitations.
+    validations:
+      required: true
 
-* type: textarea
-  id: data
-  attributes:
-  label: Data requirements
-  description: Describe the expected data sources, licenses, access conditions, and limitations.
-  validations:
-  required: true
+  - type: dropdown
+    id: data-classification
+    attributes:
+      label: Expected data classification
+      options:
+        - Public
+        - Internal
+        - Confidential
+        - Restricted
+        - No external data required
+    validations:
+      required: true
 
-* type: dropdown
-  id: data-classification
-  attributes:
-  label: Expected data classification
-  options:
-  - Public
-  - Internal
-  - Confidential
-  - Restricted
-  - No external data required
-  validations:
-  required: true
+  - type: textarea
+    id: outputs
+    attributes:
+      label: Expected outputs
+      description: Describe the expected code, report, paper, figures, tables, datasets, or other deliverables.
+    validations:
+      required: true
 
-* type: textarea
-  id: outputs
-  attributes:
-  label: Expected outputs
-  description: Describe the expected code, report, paper, figures, tables, datasets, or other deliverables.
-  validations:
-  required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation strategy
+      description: Explain how the methods and results will be tested and validated.
+    validations:
+      required: true
 
-* type: textarea
-  id: validation
-  attributes:
-  label: Validation strategy
-  description: Explain how the methods and results will be tested and validated.
-  validations:
-  required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and limitations
+      description: Document known scientific, technical, operational, ethical, or data-related risks.
+    validations:
+      required: true
 
-* type: textarea
-  id: risks
-  attributes:
-  label: Risks and limitations
-  description: Document known scientific, technical, operational, ethical, or data-related risks.
-  validations:
-  required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Proposed project status
+      options:
+        - Experimental
+        - Planned
+        - Active
+        - Reproduction study
+        - Exploratory
+    validations:
+      required: true
 
-* type: dropdown
-  id: status
-  attributes:
-  label: Proposed project status
-  options:
-  - Experimental
-  - Planned
-  - Active
-  - Reproduction study
-  - Exploratory
-  validations:
-  required: true
-
-* type: checkboxes
-  id: confirmation
-  attributes:
-  label: Submission checklist
-  options:
-  - label: I have not included confidential data, credentials, or restricted information.
-  required: true
-  - label: I have described the data sources and expected usage rights.
-  required: true
-  - label: I have documented the expected validation and reproducibility approach.
-  required: true
-  - label: I understand that the proposal requires review before implementation begins.
-  required: true
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Submission checklist
+      options:
+        - label: I have not included confidential data, credentials, or restricted information.
+          required: true
+        - label: I have described the data sources and expected usage rights.
+          required: true
+        - label: I have documented the expected validation and reproducibility approach.
+          required: true
+        - label: I understand that the proposal requires review before implementation begins.
+          required: true
